@@ -29,13 +29,17 @@ const AdminDashboard = () => {
       } else {
         throw new Error(data.error || "Failed to fetch contacts.");
       }
-    } catch (err) {
-      setError(err.message || "Something went wrong.");
+    } catch (err: unknown) { // Specify that err is of type 'unknown'
+      if (err instanceof Error) { // Check if it's an instance of Error
+        setError(err.message || "Something went wrong.");
+      } else {
+        setError("Something went wrong.");
+      }
     } finally {
       setLoading(false);
     }
   };
-
+  
   const calculateStats = (data: any[]) => {
     const countryStats: Record<string, number> = {};
     const jobTitleStats: Record<string, number> = {};
