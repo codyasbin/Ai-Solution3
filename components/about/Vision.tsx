@@ -16,7 +16,7 @@ export default function Vision() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
-          Empowering the Future: Our Purpose and Beliefs
+          Shaping Tomorrow: Our Vision, Mission, and Core Values
         </h2>
 
         {/* Vision & Mission */}
@@ -36,7 +36,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              Our Vision
+              Our Vision: Embracing Change
             </motion.h3>
             <motion.p
               className="mt-6 text-lg text-gray-300"
@@ -44,7 +44,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              To be a catalyst for change, harnessing the power of AI to tackle the world's most pressing challenges and unlock new opportunities for growth.
+              We aim to drive transformation by leveraging cutting-edge technologies, striving to make the world smarter and more connected for everyone.
             </motion.p>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              Our Mission
+              Our Mission: Redefining Progress
             </motion.h3>
             <motion.p
               className="mt-6 text-lg text-gray-300"
@@ -70,7 +70,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Our mission is to transform industries with data-driven AI solutions that fuel innovation, increase efficiency, and drive impactful decision-making.
+              To harness the potential of AI and data science to create practical, forward-thinking solutions that empower individuals and organizations.
             </motion.p>
           </motion.div>
 
@@ -83,7 +83,7 @@ export default function Vision() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">The Pillars That Define Us</h3>
+          <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">Our Fundamental Principles</h3>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             <motion.div
               className="bg-white p-10 rounded-lg shadow-xl hover:scale-105 transition-all duration-300 transform"
@@ -93,12 +93,12 @@ export default function Vision() {
             >
               <img
                 src="https://png.pngtree.com/png-clipart/20241213/original/pngtree-light-bulb-glowing-blue-star-shaped-energy-inside-illuminated-electric-idea-png-image_17808125.png"
-                alt="Innovation"
+                alt="Creativity"
                 className="w-24 h-24 rounded-full mx-auto mb-6"
               />
-              <h4 className="text-2xl font-semibold text-cyan-600">Innovation</h4>
+              <h4 className="text-2xl font-semibold text-cyan-600">Creativity</h4>
               <p className="text-gray-700 mt-4">
-                Pioneering new technologies that challenge the status quo, we continuously strive to innovate and lead through AI-driven solutions.
+                We challenge conventional thinking by encouraging bold, innovative ideas that drive meaningful change in every project we undertake.
               </p>
             </motion.div>
 
@@ -110,12 +110,12 @@ export default function Vision() {
             >
               <img
                 src="https://w7.pngwing.com/pngs/58/89/png-transparent-data-integrity-honesty-value-others-blue-text-logo.png"
-                alt="Integrity"
+                alt="Honesty"
                 className="w-30 h-24 rounded-full mx-auto mb-6"
               />
-              <h4 className="text-2xl font-semibold text-cyan-600">Integrity</h4>
+              <h4 className="text-2xl font-semibold text-cyan-600">Honesty</h4>
               <p className="text-gray-700 mt-4">
-                Integrity is the cornerstone of our work; we uphold honesty, transparency, and fairness in every aspect of our operations.
+                Integrity is the bedrock of our culture, where transparency, accountability, and truth guide our every decision and action.
               </p>
             </motion.div>
 
@@ -127,12 +127,12 @@ export default function Vision() {
             >
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmgw3Kh7LTdLJbzqmd5m7e4dsi3sZpnLSHag&s"
-                alt="Excellence"
+                alt="Quality"
                 className="w-30 h-24 rounded-full mx-auto mb-6"
               />
-              <h4 className="text-2xl font-semibold text-cyan-600">Excellence</h4>
+              <h4 className="text-2xl font-semibold text-cyan-600">Quality</h4>
               <p className="text-gray-700 mt-4">
-                Excellence is at the heart of everything we do, ensuring our AI solutions deliver unmatched quality and real-world impact.
+                We are dedicated to delivering solutions of the highest standard, ensuring that every product we create makes a lasting impact.
               </p>
             </motion.div>
           </div>

@@ -3,139 +3,108 @@ import { motion } from "framer-motion";
 
 export default function ServicesPage() {
   return (
-    <div>
-      {/* Hero Section with Cyan-Blue Gradient */}
+    <div className="bg-gray-50">
+      {/* Hero Section with Split Layout */}
       <motion.section
-        className="relative h-screen bg-gradient-to-b from-cyan-900 to-cyan-800 text-white flex items-center justify-center text-center"
+        className="relative flex flex-col lg:flex-row items-center h-screen bg-gradient-to-r from-cyan-900 to-blue-800 text-white px-6 lg:px-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div>
+        <div className="lg:w-1/2 text-center lg:text-left">
           <motion.h1
-            className="text-5xl md:text-6xl font-extrabold tracking-wide"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            className="text-4xl md:text-5xl font-extrabold leading-snug"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
-            Revolutionizing Your Digital Experience with <span className="text-cyan-300">Innovative Solutions</span>
+            Empowering Your Business with <span className="text-cyan-300">Creative Solutions</span>
           </motion.h1>
           <motion.p
             className="mt-4 text-lg md:text-xl text-gray-300"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
-            Discover how our creative solutions can enhance your business efficiency and customer experience.
+            Unlock efficiency and elevate customer experiences with our transformative services.
           </motion.p>
         </div>
+        <motion.div
+          className="lg:w-1/2 flex justify-center mt-10 lg:mt-0"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.9 }}
+        >
+          <img
+            src="https://amaris.com/wp-content/uploads/2023/04/Digital-Solutions2.png"
+            alt="Digital Solutions"
+            className="w-96 h-56 rounded-lg shadow-lg"
+          />
+        </motion.div>
       </motion.section>
 
-      {/* Service Section 1 - Cloud Integration */}
+      {/* Services Grid */}
       <motion.section
-        className="relative py-20 bg-white text-gray-800"
+        className="py-20 bg-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={{
-          hidden: { opacity: 0, x: -100 },
-          visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
-          <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
-            <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Cloud Integration</h2>
-            <p className="text-lg text-gray-600 text-center lg:text-left">
-              Seamlessly connect your systems to the cloud, enabling scalable solutions and boosting your operational flexibility.
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          {/* Service 1 */}
+          <motion.div
+            className="flex flex-col items-center bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img src="/strategy.png" alt="Cloud Integration" className="h-32 mb-4" />
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Cloud Integration</h2>
+            <p className="text-gray-600 text-center">
+              Connect seamlessly to the cloud for scalable and efficient operations.
             </p>
-            <motion.button
-              className="mt-6 px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
+            <button className="mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg">
               Learn More
-            </motion.button>
-          </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <motion.img
-              src="/strategy.png"
-              alt="Cloud Integration"
-              className="rounded-lg shadow-xl h-96 hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        </div>
-      </motion.section>
+            </button>
+          </motion.div>
 
-      {/* Service Section 2 - Data-Driven Insights */}
-      <motion.section
-        className="relative py-20 bg-cyan-800 text-white"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, x: 100 },
-          visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
-          <div className="lg:w-1/2 flex justify-center">
-            <motion.img
-              src="./analysis.png"
-              alt="Data Insights"
-              className="rounded-lg shadow-xl h-96 hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
-            <h2 className="text-3xl font-extrabold text-white mb-4">Data-Driven Insights</h2>
-            <p className="text-lg text-gray-300 text-center lg:text-left">
-              Leverage real-time data to unlock powerful insights, optimize strategies, and predict future trends.
+          {/* Service 2 */}
+          <motion.div
+            className="flex flex-col items-center bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img src="./analysis.png" alt="Data Insights" className="h-32 mb-4" />
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Data-Driven Insights</h2>
+            <p className="text-gray-600 text-center">
+              Use data to optimize strategies and predict future trends.
             </p>
-            <motion.button
-              className="mt-6 px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
+            <button className="mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg">
               Explore Insights
-            </motion.button>
-          </div>
-        </div>
-      </motion.section>
+            </button>
+          </motion.div>
 
-      {/* Service Section 3 - Process Automation */}
-      <motion.section
-        className="relative py-20 bg-white text-gray-800"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, x: -100 },
-          visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
-          <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
-            <h2 className="text-3xl font-extrabold text-gray-800 mb-4">Process Automation</h2>
-            <p className="text-lg text-gray-600 text-center lg:text-left">
-              Automate repetitive tasks, streamline operations, and empower your team to focus on higher-level decision-making.
+          {/* Service 3 */}
+          <motion.div
+            className="flex flex-col items-center bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img src="/automation.png" alt="Process Automation" className="h-32 mb-4" />
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Process Automation</h2>
+            <p className="text-gray-600 text-center">
+              Streamline operations and focus on strategic goals.
             </p>
-            <motion.button
-              className="mt-6 px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
+            <button className="mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg">
               Start Automating
-            </motion.button>
-          </div>
-          <div className="lg:w-1/2 flex justify-center">
-            <motion.img
-              src="/automation.png"
-              alt="Process Automation"
-              className="rounded-lg h-96 shadow-xl hover:scale-105 transition-transform duration-300"
-            />
-          </div>
+            </button>
+          </motion.div>
         </div>
       </motion.section>
 
-      {/* How It Works Section */}
+      {/* How It Works Section - Vertical Timeline */}
       <motion.section
-        className="py-16 bg-gradient-to-b from-cyan-700 to-cyan-600 text-white"
+        className="py-16 bg-gradient-to-b from-cyan-700 to-cyan-500 text-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -144,66 +113,55 @@ export default function ServicesPage() {
           visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.3 } },
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200 mb-12">
-            How Our Solutions Streamline Your Business
-          </h2>
-          <div className="flex flex-wrap justify-center gap-12">
-            {/* Step 1 - Consult */}
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl font-extrabold text-center mb-12">How It Works</h2>
+          <div className="space-y-12">
+            {/* Step 1 */}
             <motion.div
-              className="flex flex-col items-center bg-cyan-800 p-8 rounded-xl shadow-xl w-64 transform hover:scale-105 transition-all duration-300"
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div
-                className="w-16 h-16 mb-4 bg-cyan-600 text-white rounded-full flex items-center justify-center text-lg font-semibold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="flex-shrink-0 w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center font-semibold text-lg mr-6">
                 1
-              </motion.div>
-              <h3 className="text-xl font-semibold">Consult</h3>
-              <p className="text-gray-300 mt-2 text-center">
-                We assess your current processes and design a roadmap for digital transformation.
-              </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold">Consult</h3>
+                <p className="text-gray-200 mt-2">
+                  Analyze current processes and plan for transformation.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Step 2 - Develop */}
+            {/* Step 2 */}
             <motion.div
-              className="flex flex-col items-center bg-cyan-800 p-8 rounded-xl shadow-xl w-64 transform hover:scale-105 transition-all duration-300"
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div
-                className="w-16 h-16 mb-4 bg-cyan-600 text-white rounded-full flex items-center justify-center text-lg font-semibold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="flex-shrink-0 w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center font-semibold text-lg mr-6">
                 2
-              </motion.div>
-              <h3 className="text-xl font-semibold">Develop</h3>
-              <p className="text-gray-300 mt-2 text-center">
-                We create custom solutions that integrate seamlessly with your existing systems.
-              </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold">Develop</h3>
+                <p className="text-gray-200 mt-2">
+                  Create tailored solutions to fit your systems.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Step 3 - Implement */}
+            {/* Step 3 */}
             <motion.div
-              className="flex flex-col items-center bg-cyan-800 p-8 rounded-xl shadow-xl w-64 transform hover:scale-105 transition-all duration-300"
+              className="flex items-center"
               whileHover={{ scale: 1.05 }}
             >
-              <motion.div
-                className="w-16 h-16 mb-4 bg-cyan-600 text-white rounded-full flex items-center justify-center text-lg font-semibold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="flex-shrink-0 w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center font-semibold text-lg mr-6">
                 3
-              </motion.div>
-              <h3 className="text-xl font-semibold">Implement</h3>
-              <p className="text-gray-300 mt-2 text-center">
-                Our team ensures smooth deployment and provides continuous support to optimize results.
-              </p>
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold">Implement</h3>
+                <p className="text-gray-200 mt-2">
+                  Ensure smooth deployment and continuous optimization.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
