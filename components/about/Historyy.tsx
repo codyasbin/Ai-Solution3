@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function HistorySection() {
   const galleryImages = [
-    { src: "https://english.cas.cn/newsroom/archive/news_archive/nu2015/201507/W020150728364997550435.jpg",caption: "Conference 2015" },
+    { src: "https://english.cas.cn/newsroom/archive/news_archive/nu2015/201507/W020150728364997550435.jpg", caption: "Conference 2015" },
     { src: "https://media.licdn.com/dms/image/v2/D4E22AQGVRbdnQ69CNg/feedshare-shrink_800/feedshare-shrink_800/0/1733388170780?e=2147483647&v=beta&t=TwzX2YhfA5VehRRZi9kSs_vZioIWxnI_3xtAbqPHmiw", caption: "AI Summit 2018" },
     { src: "https://assets.wam.ae/resource/69q07vbf1k71frypn.jpeg", caption: "Global Expansion 2022" },
     { src: "https://cdn.prod.website-files.com/5e51f2cd33d368869635e146/6467bda61a9e113f2853aad5_LVMH-PR-Pic_CP.jpg", caption: "Innovation Award" },
@@ -25,21 +25,19 @@ export default function HistorySection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
-          Our Journey
+          Our Milestones
         </h2>
 
         {/* Timeline */}
         <div className="relative flex flex-col items-center">
           <div className="absolute inset-y-0 border-l-4 border-cyan-500 left-1/2"></div>
           <div className="space-y-16">
-            {[{ year: "2015", detail: "Founded as a small consultancy firm." }, 
-              { year: "2018", detail: "Delivered first enterprise AI solution." },
-              { year: "2022", detail: "Expanded to serve global markets." }].map((item, index) => (
+            {[{ year: "2016", detail: "Initiated with a vision to revolutionize AI." }, 
+              { year: "2019", detail: "Launched our first AI-powered product in the market." },
+              { year: "2023", detail: "Achieved global reach with cutting-edge solutions." }].map((item, index) => (
                 <motion.div
                   key={index}
-                  className={`flex items-center justify-start space-x-6 ${
-                    index % 2 === 0 ? "ml-20" : "mr-20 flex-row-reverse"
-                  }`}
+                  className={`flex items-center justify-start space-x-6 ${index % 2 === 0 ? "ml-20" : "mr-20 flex-row-reverse"}`}
                   whileHover={{ scale: 1.05 }}
                 >
                   {/* Year */}
@@ -66,7 +64,7 @@ export default function HistorySection() {
         {/* Photo Gallery */}
         <div className="mt-16">
           <h3 className="text-3xl font-semibold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
-            Gallery of Memories
+            Gallery of Achievements
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {galleryImages.map((image, index) => (

@@ -16,7 +16,7 @@ export default function Vision() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
-          Our Vision, Mission & Values
+          Empowering the Future: Our Purpose and Beliefs
         </h2>
 
         {/* Vision & Mission */}
@@ -44,8 +44,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              To be the global leader in AI-powered solutions, revolutionizing industries and
-              enhancing lives through innovation and technology.
+              To be a catalyst for change, harnessing the power of AI to tackle the world's most pressing challenges and unlock new opportunities for growth.
             </motion.p>
           </motion.div>
 
@@ -71,8 +70,7 @@ export default function Vision() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              Our mission is to provide innovative and data-driven AI solutions that enable businesses
-              to streamline operations, increase productivity, and enhance decision-making.
+              Our mission is to transform industries with data-driven AI solutions that fuel innovation, increase efficiency, and drive impactful decision-making.
             </motion.p>
           </motion.div>
 
@@ -85,7 +83,7 @@ export default function Vision() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">Our Core Values</h3>
+          <h3 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">The Pillars That Define Us</h3>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             <motion.div
               className="bg-white p-10 rounded-lg shadow-xl hover:scale-105 transition-all duration-300 transform"
@@ -100,7 +98,7 @@ export default function Vision() {
               />
               <h4 className="text-2xl font-semibold text-cyan-600">Innovation</h4>
               <p className="text-gray-700 mt-4">
-                We thrive on constant innovation, always pushing the boundaries of what AI can achieve.
+                Pioneering new technologies that challenge the status quo, we continuously strive to innovate and lead through AI-driven solutions.
               </p>
             </motion.div>
 
@@ -117,7 +115,7 @@ export default function Vision() {
               />
               <h4 className="text-2xl font-semibold text-cyan-600">Integrity</h4>
               <p className="text-gray-700 mt-4">
-                Our work is built on a foundation of transparency, honesty, and ethical practices.
+                Integrity is the cornerstone of our work; we uphold honesty, transparency, and fairness in every aspect of our operations.
               </p>
             </motion.div>
 
@@ -134,7 +132,7 @@ export default function Vision() {
               />
               <h4 className="text-2xl font-semibold text-cyan-600">Excellence</h4>
               <p className="text-gray-700 mt-4">
-                We strive for excellence in everything we do, setting high standards for quality and performance.
+                Excellence is at the heart of everything we do, ensuring our AI solutions deliver unmatched quality and real-world impact.
               </p>
             </motion.div>
           </div>

@@ -80,30 +80,43 @@ export default function FeedbackSection() {
       {loading ? (
         <div className="text-center text-gray-500">Loading feedback...</div>
       ) : feedbacks.length > 0 ? (
-        feedbacks.map((feedback) => (
-          <motion.div
-            key={feedback._id}
-            className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-semibold">{feedback.name}</h3>
-                <p className="text-gray-500">{feedback.role}</p>
-              </div>
-              <button
-                aria-label={`Delete feedback by ${feedback.name}`}
-                onClick={() => handleDeleteFeedback(feedback._id)}
-                className="text-red-600 hover:text-red-900"
+        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+          <thead>
+            <tr className="bg-gray-100 text-left">
+              <th className="py-2 px-4 font-semibold text-sm text-gray-700">Name</th>
+              <th className="py-2 px-4 font-semibold text-sm text-gray-700">Role</th>
+              <th className="py-2 px-4 font-semibold text-sm text-gray-700">Feedback</th>
+              <th className="py-2 px-4 font-semibold text-sm text-gray-700">Rating</th>
+              <th className="py-2 px-4 font-semibold text-sm text-gray-700">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {feedbacks.map((feedback) => (
+              <motion.tr
+                key={feedback._id}
+                className="hover:bg-gray-50 transition-colors"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
               >
-                Delete
-              </button>
-            </div>
-            <p className="mt-4 italic">{feedback.feedback}</p>
-            <StarRating rating={feedback.rating} />
-          </motion.div>
-        ))
+                <td className="py-4 px-4 border-b border-gray-200">{feedback.name}</td>
+                <td className="py-4 px-4 border-b border-gray-200">{feedback.role}</td>
+                <td className="py-4 px-4 border-b border-gray-200 italic">{feedback.feedback}</td>
+                <td className="py-4 px-4 border-b border-gray-200">
+                  <StarRating rating={feedback.rating} />
+                </td>
+                <td className="py-4 px-4 border-b border-gray-200">
+                  <button
+                    aria-label={`Delete feedback by ${feedback.name}`}
+                    onClick={() => handleDeleteFeedback(feedback._id)}
+                    className="text-red-600 hover:text-red-900"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </motion.tr>
+            ))}
+          </tbody>
+        </table>
       ) : (
         <p className="text-center text-gray-500 mt-4">No feedback available</p>
       )}

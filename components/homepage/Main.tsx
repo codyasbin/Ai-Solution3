@@ -7,8 +7,8 @@ export default function Main() {
     <section id="main" className="relative h-screen bg-gradient-to-br from-cyan-800 via-cyan-700 to-blue-800 overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/4 w-60 h-60 bg-cyan-500 opacity-30 rounded-full blur-3xl md:w-72 md:h-72"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-blue-600 opacity-40 rounded-full blur-2xl md:w-96 md:h-96"></div>
+        <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-cyan-400 opacity-20 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500 opacity-30 rounded-full blur-[100px]"></div>
       </div>
 
       {/* Content */}
@@ -20,17 +20,17 @@ export default function Main() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Transform Your Vision with AI
+          Unlock the Future with AI Innovation
         </motion.h1>
 
         {/* Tagline */}
         <motion.p
-          className="text-base md:text-lg lg:text-2xl text-gray-200 max-w-3xl mx-auto"
+          className="text-base md:text-lg lg:text-2xl text-gray-200 max-w-3xl mx-auto mt-4"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          Discover tailored solutions that harness cutting-edge AI to drive growth, innovation, and exceptional user experiences.
+          Empower your business with intelligent solutions that enhance efficiency, decision-making, and growth.
         </motion.p>
 
         {/* Features Section */}
@@ -46,9 +46,11 @@ export default function Main() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">AI Automation</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">
+              Intelligent Automation
+            </h2>
             <p className="text-sm md:text-base text-gray-100 group-hover:text-gray-200">
-              Streamline repetitive tasks with intelligent automation, saving time and reducing operational errors.
+              Optimize processes and boost productivity with AI-driven automation tailored to your needs.
             </p>
           </motion.div>
 
@@ -58,9 +60,11 @@ export default function Main() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">Data-Driven Insights</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">
+              Predictive Analytics
+            </h2>
             <p className="text-sm md:text-base text-gray-100 group-hover:text-gray-200">
-              Unlock actionable insights with AI-driven data analysis for smarter decision-making.
+              Leverage data to forecast trends, identify opportunities, and make informed decisions.
             </p>
           </motion.div>
 
@@ -70,9 +74,11 @@ export default function Main() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">Custom AI Solutions</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4">
+              Seamless Integration
+            </h2>
             <p className="text-sm md:text-base text-gray-100 group-hover:text-gray-200">
-              Personalized AI solutions tailored to meet the unique needs of your business.
+              Effortlessly incorporate AI technologies into your existing systems for enhanced performance.
             </p>
           </motion.div>
         </motion.div>
@@ -87,7 +93,7 @@ export default function Main() {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            Explore Our Solutions
+            Discover More Solutions
           </motion.button>
         </Link>
       </div>

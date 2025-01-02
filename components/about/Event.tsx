@@ -29,7 +29,7 @@ const events = [
 export default function EventsSection() {
   return (
     <motion.section
-      className="py-16 bg-gradient-to-b from-cyan-800 to-cyan-600 text-white"
+      className="py-20 bg-cyan-900 text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -38,32 +38,35 @@ export default function EventsSection() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.3 } },
       }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl text-transparent font-bold text-center mb-8 bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
-          Upcoming Events
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-200">
+          Featured Upcoming Events
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="space-y-12">
           {events.map((event, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-lg shadow-xl transform hover:scale-105 transition-all duration-500"
+              className="flex flex-col lg:flex-row items-center justify-between bg-cyan-800 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-500"
               whileHover={{ scale: 1.05 }}
             >
               {/* Event Image */}
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-full h-64 object-cover rounded-t-lg"
-              />
+              <div className="lg:w-1/3">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-64 object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-r-none"
+                />
+              </div>
 
-              {/* Overlay with event details */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-2xl font-semibold text-white">{event.title}</h3>
-                <p className="text-sm text-gray-200">{event.date} - {event.location}</p>
-                <p className="mt-4 text-gray-300">{event.description}</p>
+              {/* Event Details */}
+              <div className="p-8 lg:w-2/3 text-left">
+                <h3 className="text-3xl font-semibold text-white">{event.title}</h3>
+                <p className="text-md text-gray-300 my-4">{event.date} | {event.location}</p>
+                <p className="text-lg text-gray-200">{event.description}</p>
                 <Link href={"contact"}>
-                  <button className="mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
-                    Register
+                  <button className="mt-6 px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white text-lg font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Register Now
                   </button>
                 </Link>
               </div>

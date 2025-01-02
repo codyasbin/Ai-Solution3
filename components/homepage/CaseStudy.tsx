@@ -14,10 +14,10 @@ export default function CaseStudy() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <h2 className="text-4xl font-extrabold text-gray-900 text-center">
-          Transformative Case Studies
+          Real-World Impact Stories
         </h2>
         <p className="text-gray-600 text-center mt-4">
-          Discover real-world examples of how we’ve driven growth and efficiency through AI-powered solutions.
+          Explore how our AI solutions have empowered businesses to overcome challenges and achieve remarkable success.
         </p>
 
         {/* Case Study Cards */}
@@ -29,14 +29,14 @@ export default function CaseStudy() {
           >
             <img
               src="https://anadea.info/blog/retail-automation/retail_automation_hu4bec7d9caa27a1922c2a34a6719fb67a_201249_0x0_q75_h2_.webp"
-              alt="Retail Automation"
+              alt="Retail Innovation"
               className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-2xl font-semibold">Retail Automation</h3>
+              <h3 className="text-2xl font-semibold">Retail Transformation</h3>
               <p className="text-sm mt-2">
-                Revolutionized inventory management, reducing stock shortages by 30%.
+                Optimized supply chains, cutting waste by 25% and boosting revenue growth.
               </p>
             </div>
             <Link
@@ -54,14 +54,14 @@ export default function CaseStudy() {
           >
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfd_wCOO8cTEvPt5HUgKnsmhWyTtRZLhsKtQ&s"
-              alt="Financial Analytics"
+              alt="Investment Insights"
               className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-2xl font-semibold">Financial Analytics</h3>
+              <h3 className="text-2xl font-semibold">Smart Investment Tools</h3>
               <p className="text-sm mt-2">
-                Delivered AI-powered insights for smarter investment decisions.
+                Enhanced portfolio strategies, delivering a 20% higher ROI for clients.
               </p>
             </div>
             <Link
@@ -79,14 +79,14 @@ export default function CaseStudy() {
           >
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpyNUWuGNUogpewOevs432GXp0CxmnYYGExg&s"
-              alt="Healthcare Optimization"
+              alt="Healthcare AI"
               className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-2xl font-semibold">Healthcare Optimization</h3>
+              <h3 className="text-2xl font-semibold">AI in Healthcare</h3>
               <p className="text-sm mt-2">
-                Improved patient care efficiency by 40% through AI-driven healthcare solutions.
+                Reduced diagnosis time by 50%, enabling faster, life-saving treatments.
               </p>
             </div>
             <Link

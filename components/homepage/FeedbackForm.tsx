@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaStar } from "react-icons/fa"; // Importing star icon for rating
 
 interface FeedbackData {
   name: string;
@@ -32,6 +33,10 @@ export default function FeedbackForm() {
         ? Math.max(1, Math.min(5, Number(e.target.value))) // Ensure rating is between 1-5
         : e.target.value,
     });
+  };
+
+  const handleRatingChange = (rating: number) => {
+    setFormData((prevData) => ({ ...prevData, rating }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -153,21 +158,33 @@ export default function FeedbackForm() {
           </p>
         </div>
 
-        {/* Rating Input */}
-        {renderInputField(
-          "Rating (1-5)",
-          "number",
-          "rating",
-          "Rate us from 1 to 5",
-          formData.rating,
-          { required: true, min: 1, max: 5 }
-        )}
+        {/* Rating Input (Star Rating) */}
+        <div>
+          <label
+            htmlFor="rating"
+            className="block font-medium text-gray-700 mb-1"
+          >
+            Rating (1-5)
+          </label>
+          <div className="flex items-center space-x-1">
+            {Array.from({ length: 5 }, (_, index) => (
+              <FaStar
+                key={index}
+                className={`cursor-pointer text-2xl ${
+                  formData.rating > index ? "text-yellow-500" : "text-gray-300"
+                }`}
+                onClick={() => handleRatingChange(index + 1)}
+                aria-label={`Rate ${index + 1} star`}
+              />
+            ))}
+          </div>
+        </div>
 
         {/* Success and Error Messages */}
         <AnimatePresence>
           {successMessage && (
             <motion.p
-              className="text-green-600 text-center"
+              className="text-yellow-500 text-center"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
